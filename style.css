@@ -1,0 +1,160 @@
+/* Global */
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-grey: #F4F2F2;
+    --color-grey: #E5E5E5;
+    --color-dark-grey:#C4C4C4;
+    --color-black: #000000;
+
+    /* Font size */
+    --font-xlarge: 48px;
+    --font-large: 36px;
+    --font-medium: 24px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+
+    /* Annimation */
+    --animation-duration: 300ms;
+}
+
+/* Reset CSS */
+* {
+    font-family: 'Azeret Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol, li {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+button,
+input,
+textarea {
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+    outline: none;
+    box-shadow: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-light-grey);
+}
+
+/* To do List */
+.todo__container {
+    margin: 120px auto;
+    max-width: 400px;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 4px;
+    padding: 25px;
+}
+
+.todo__container header {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-regular);
+}
+
+.todo__input {
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.todo__input input {
+    font-size: var(--font-small);
+    width: 85%;
+    height: 100%;
+    border: 1px solid var(--color-dark-grey);
+    border-radius: 4px;
+    padding-left: 15px;
+}
+
+.todo__input button {
+    width: 60px;
+    height: 100%;
+    background: var(--color-dark-grey);
+    color: var(--color-white);
+    font-size: var(--font-medium);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.todo__list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todo__list li {
+    font-size: var(--font-small);
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background: var(--color-grey);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todo__list li span {
+    position: absolute;
+    right: -45px;
+    color: var(--color-white);
+    width: 45px;
+    text-align: center;
+    background: var(--color-black);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: all var(--animation-duration) ease;
+}
+
+.todo__list li:hover span {
+    right: 0px;
+}
+
+.todo__footer {
+    font-size: var(--font-small);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.todo__footer button {
+    background: var(--color-dark-grey);
+    color: var(--color-white);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
